@@ -2,9 +2,11 @@
 
 1. Doctor Appointment Panel
 2. Patient records Panel
-3. Admin manage all the panel
+3. Admin Panel for Doctor Records
 4.MySQL Database
 
+
+<br>
 <h1>Run This Project</h1>
 1. php artisan serve
 2. php artisan migrate
