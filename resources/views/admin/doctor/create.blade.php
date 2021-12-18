@@ -38,7 +38,7 @@
             <div class="card">
                 <div class="card-header"><h3>Add doctor</h3></div>
                 <div class="card-body">
-{{--                    <form class="forms-sample" action="{{route('doctor.store')}}" method="post" enctype="multipart/form-data" >@csrf--}}
+                    <form class="forms-sample" action="{{route('doctor.store')}}" method="post" enctype="multipart/form-data" >@csrf
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="">Full name</label>
@@ -116,17 +116,17 @@
 {{--                                        @foreach(App\Department::all() as $d)--}}
 {{--                                            <option value="{{$d->department}}">{{$d->department}}</option>--}}
 {{--                                        @endforeach--}}
-                                    </select>
+{{--                                    </select>--}}
 
 
-                                    @error('department')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
+{{--                                    @error('department')--}}
+{{--                                    <span class="invalid-feedback" role="alert">--}}
+{{--                                        <strong>{{ $message }}</strong>--}}
+{{--                                    </span>--}}
+{{--                                    @enderror--}}
 
-                                </div>
-                            </div>
+{{--                                </div>--}}
+{{--                            </div>--}}
 
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -161,9 +161,9 @@
                                 <label>Role</label>
                                 <select name="role_id" class="form-control @error('role_id') is-invalid @enderror">
                                     <option value="">Please select role</option>
-{{--                                    @foreach(App\Role::where('name','!=','patient')->get() as $role)--}}
-{{--                                        <option value="{{$role->id}}">{{$role->name}}</option>--}}
-{{--                                    @endforeach--}}
+                                    @foreach(App\Models\Role::where('name','!=','patient')->get() as $role)
+                                        <option value="{{$role->id}}">{{$role->name}}</option>
+                                    @endforeach
 
                                 </select>
                                 @error('role_id')

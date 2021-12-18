@@ -24,10 +24,12 @@ Route::get('/index', function () {
     return view('index');
 
 });
-//Route::resource('doctor','DoctorController');
+
 Auth::routes();
 
 
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-    Route::get('/doctor/create', [App\Http\Controllers\DoctorController::class, 'create']);
+//    Route::get('/doctor/create', [App\Http\Controllers\DoctorController::class, 'create']);
+Route::resource('doctor',DoctorController::class);
+Route::get('doctor/index',[DoctorController::class, 'index']);
