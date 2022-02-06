@@ -3,6 +3,7 @@
 1. Doctor Appointment Panel
 2. Patient records Panel
 3. Admin Panel for Doctor Records
+
 4.MySQL Database
 
 
