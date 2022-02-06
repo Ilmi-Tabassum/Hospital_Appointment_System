@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="">Full name</label>
-                                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="doctor name" value="                   {{old('name')}}">
+                                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="doctor name" value="{{old('name')}}">
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <label for="">Email</label>
-                                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="email"value="                   {{old('email')}}">
+                                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="email"value="{{old('email')}}">
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <label for="">Gender</label>
-                                <select class="form-control @error('gender') is-invalid @enderror" name="gender">
+                                <select class="form-control @error('gender') is-invalid @enderror" name="gender" value="{{old('gender')}}">>
                                     <option value="">select</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
@@ -88,7 +88,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <label for="">Education</label>
-                                <input type="text" name="education" class="form-control @error('education') is-invalid @enderror" placeholder="doctor highest degree" value="                   {{old('education')}}">
+                                <input type="text" name="education" class="form-control @error('education') is-invalid @enderror" placeholder="doctor highest degree" value="{{old('education')}}">
                                 @error('education')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -97,7 +97,7 @@
                             </div>
                             <div class="col-lg-6">
                                 <label for="">Address</label>
-                                <input type="text" name="address" class="form-control @error('address') is-invalid @enderror" placeholder="doctor address"  value="{{old('address')}}">
+                                <input type="text" name="address" class="form-control @error('address') is-invalid @enderror" placeholder="doctor address" value="{{old('address')}}">
                                 @error('address')
                                 <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -107,31 +107,23 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="">Specialist</label>
-                                    <select name="department" class="form-control">
-                                        <option value="">Please select</option>
+                        <div class="col-lg-6">
+                            <label for="">Specialist</label>
+                            <input type="text" name="department" class="form-control @error('department') is-invalid @enderror" placeholder="Department "  value="{{old('department')}}">
+                            @error('department')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
 
-{{--                                        @foreach(App\Department::all() as $d)--}}
-{{--                                            <option value="{{$d->department}}">{{$d->department}}</option>--}}
-{{--                                        @endforeach--}}
-{{--                                    </select>--}}
 
 
-{{--                                    @error('department')--}}
-{{--                                    <span class="invalid-feedback" role="alert">--}}
-{{--                                        <strong>{{ $message }}</strong>--}}
-{{--                                    </span>--}}
-{{--                                    @enderror--}}
-
-{{--                                </div>--}}
-{{--                            </div>--}}
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Phone number</label>
-                                    <input type="text" name="phone_number" class="form-control @error('phone_number') is-invalid @enderror"value="                   {{old('phone_number')}}">
+                                    <input type="text" name="phone_number" class="form-control @error('phone_number') is-invalid @enderror" value="{{old('phone_number')}}">
                                     @error('phone_number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
